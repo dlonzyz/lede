@@ -957,7 +957,7 @@ menu "Filesystem ACL and attr support options"
 	config KERNEL_F2FS_FS_POSIX_ACL
 		bool "Enable POSIX ACL for F2FS Filesystems"
 		select KERNEL_FS_POSIX_ACL
-		default n
+		default y
 
 	config KERNEL_JFFS2_FS_POSIX_ACL
 		bool "Enable POSIX ACL for JFFS2 Filesystems"
