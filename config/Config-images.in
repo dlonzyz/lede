@@ -146,7 +146,7 @@ menu "Target Images"
 			depends on TARGET_ROOTFS_SQUASHFS
 			default 64 if LOW_MEMORY_FOOTPRINT
 			default 1024 if (SMALL_FLASH && !LOW_MEMORY_FOOTPRINT)
-			default 256
+			default 512
 
 	menuconfig TARGET_ROOTFS_UBIFS
 		bool "ubifs"
@@ -278,7 +278,7 @@ menu "Target Images"
 	config TARGET_ROOTFS_PARTSIZE
 		int "Root filesystem partition size (in MB)"
 		depends on USES_ROOTFS_PART || TARGET_ROOTFS_EXT4FS || TARGET_omap || TARGET_rb532 || TARGET_sunxi || TARGET_uml
-		default 160
+		default 256
 		help
 		  Select the root filesystem partition size.
 
