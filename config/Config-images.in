@@ -197,7 +197,7 @@ menu "Target Images"
 		select PACKAGE_grub2
 		select PACKAGE_grub2-efi
 		select PACKAGE_kmod-fs-vfat
-		default y
+		default n
 
 	config GRUB_CONSOLE
 		bool "Use Console Terminal (in addition to Serial)"
@@ -236,7 +236,7 @@ menu "Target Images"
 	config GRUB_TITLE
 		string "Title for the menu entry in GRUB"
 		depends on GRUB_IMAGES || GRUB_EFI_IMAGES
-		default "OpenWrt"
+		default "OpenWrt diy by dlonzyz"
 		help
 		  This is the title of the GRUB menu entry.
 		  If unspecified, it defaults to OpenWrt.
@@ -256,7 +256,7 @@ menu "Target Images"
 		bool "Build VMware image files (VMDK)"
 		depends on TARGET_x86
 		depends on GRUB_IMAGES || GRUB_EFI_IMAGES
-		default y
+		default n
 		select PACKAGE_kmod-e1000
 
 	config TARGET_IMAGES_GZIP
