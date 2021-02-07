@@ -21,7 +21,7 @@ menu "Target Images"
 			default TARGET_INITRAMFS_COMPRESSION_LZMA if TARGET_mpc85xx
 			default TARGET_INITRAMFS_COMPRESSION_LZMA if TARGET_ramips
 			default TARGET_INITRAMFS_COMPRESSION_LZMA if TARGET_ipq40xx
-			default TARGET_INITRAMFS_COMPRESSION_NONE
+			default TARGET_INITRAMFS_COMPRESSION_GZIP
 			depends on TARGET_ROOTFS_INITRAMFS
 			help
 			  Select ramdisk compression.
